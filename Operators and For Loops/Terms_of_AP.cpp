@@ -21,20 +21,22 @@ Sample Output 2 :
 
 #include<iostream>
 using namespace std;
+
 int main() {
 	// Write your code here
 	int n;
 	int i,res;
-	int flag = 1;
+	int term = 1; //using this as a variable to increment the index number of series in 3*i+2, usin terms as i
 	cin >>n;
 	
-	for(i = 1; i<=1000;i++ )
+	for(i = 1; i<=n; ) //this loop will run until required number of terms are not printed
 	{ 
-		res = ((3*i) + 2);
-		if(res % 4 != 0 && flag <= n) 
+		res = ((3*term) + 2);
+		if(res % 4 != 0) 
 		{
 				cout <<res<<" ";
-				flag++;
+				i++;
 		}	
+        tern++;
 	}
 }
